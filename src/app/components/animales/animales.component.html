@@ -1,0 +1,39 @@
+<div class="container t-container pt-5">
+  <div class="card w-100">
+    <div class="card-header bg-white">
+     <h2 class="font-weight-bold text-center">Listado de Animales </h2>
+    </div>
+    <div class="hover-card" >
+      <div class="card-text">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Tipo de Animal</th>
+                <th>Raza</th>
+                <th>Edad</th>
+                <th>ID-Dueño</th>
+                <th>Peso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let animal of animal" (click)="onSelect(animal);">
+                <td>{{animal.name}}</td>
+                <td>{{animal.animal}}</td>
+                <td>{{animal.race}}</td>
+                <td>{{animal.ageInMonths}}</td>
+                <td>{{animal.id}}</td>
+                <td>{{animal.weightInPounds}}</td>
+              </tr> 
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="animalSelected" >
+<app-detalles-animales [animal]="animalSelected"></app-detalles-animales>
+</div>

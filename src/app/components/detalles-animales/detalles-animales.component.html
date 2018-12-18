@@ -1,0 +1,62 @@
+<div  class="card mt-5">
+  <div class="card-body">
+      <div class="card-title">
+          <h1 class="display-4 text-center">Detalles de los Animales</h1>
+        </div>
+      <div class="card-text">
+        <form #form = ngForm>
+            <div class="form-group">
+                Name:
+                <input class="form-control" name="name" type="text" #name="ngModel" [(ngModel)]="animal.name">
+              </div>
+              <div class="form-group">
+                Id-Animal:
+                <input type="number" name="id" #id="ngModel" 
+                  class="form-control" [(ngModel)]="animal.id" >
+              </div>
+    
+              <div class="form-group">
+                Animal:
+                <input type="text" name="tipoAnimal" #tipoAnimal="ngModel"  class="form-control" [(ngModel)]="animal.animal" >
+              </div>
+              <div class="form-group">
+                  Raza:
+                  <input class="form-control" name="raza" type="text" [(ngModel)]="animal.race">
+              </div>
+              <div class="form-group">
+                Edad:
+                <input type="text" name="edad" #roleId="ngModel"  class="form-control" [(ngModel)]="animal.ageInMonths" >
+              </div>
+
+              <div class="form-group">
+                Id-Dueño:
+                <input type="text" name="idDuenio" #roleId="ngModel"  class="form-control" [(ngModel)]="animal.ownerId" >
+              </div>
+
+              <div class="form-group">
+                Peso:
+                <input type="number" name="peso" #peso="ngModel"  class="form-control" [(ngModel)]="animal.weightInPounds" >
+              </div>
+        </form>
+      </div>
+  </div>
+  <div class="card-body">
+    <div class="card-title">
+        <h1 class="display-4 text-center">Detalles del Dueño</h1>
+      </div>
+    <div class="card-text">
+      <form #form = ngForm>
+          <div class="form-group">
+              Name:
+              <input class="form-control" name="name" type="text" #name="ngModel" [(ngModel)]="animal.name">
+            </div>
+            <div class="form-group">
+              Id:
+              <input type="number" name="id" #id="ngModel" 
+                class="form-control" [(ngModel)]="animal.id" >
+            </div>
+        <button class="btn btn-success" type="submit" >Volver</button>
+      </form>
+    </div>
+</div>
+</div>
